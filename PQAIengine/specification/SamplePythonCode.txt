@@ -1,0 +1,71 @@
+```python
+import matplotlib.pyplot as plt
+
+# ここから下はグラフ描画のコード
+x = [1, 2, 3, 4, 5]
+y = [1, 4, 9, 16, 25]
+plt.plot(x, y, marker='o')
+plt.title("折れ線グラフの例")
+plt.xlabel("x軸")
+plt.ylabel("y軸")
+plt.grid(True)
+plt.show()
+```
+
+```python
+print("Hello, World!")
+```
+
+```python
+import matplotlib.pyplot as plt
+
+labels = ['A', 'B', 'C', 'D']
+sizes = [15, 30, 45, 10]
+colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue']
+
+plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+plt.axis('equal')
+plt.title('円グラフのサンプル')
+plt.show()
+```
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.rand(50)
+y = np.random.rand(50)
+colors = np.random.rand(50)
+sizes = 1000 * np.random.rand(50)
+
+plt.scatter(x, y, c=colors, s=sizes, alpha=0.5, cmap='viridis')
+plt.title('散布図のサンプル')
+plt.xlabel('X軸')
+plt.ylabel('Y軸')
+plt.colorbar()
+plt.show()
+```
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+data = np.random.randn(1000)
+plt.hist(data, bins=30, color='skyblue', edgecolor='black')
+plt.title('ヒストグラムのサンプル')
+plt.xlabel('値')
+plt.ylabel('頻度')
+plt.show()
+```
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+np.random.seed(0)
+rolls = np.random.randint(1, 7, 100)
+plt.hist(rolls, bins=np.arange(1,8)-0.5, rwidth=0.8, color='orange', edgecolor='black')
+plt.xticks(range(1,7))
+plt.title('サイコロを100回振った結果')
+plt.xlabel('出目')
+plt.ylabel('回数')
+plt.show()
+```
